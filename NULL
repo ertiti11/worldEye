@@ -1,0 +1,9 @@
+
+Haciendo ping a 223.149.174.159 con 32 bytes de datos:
+Respuesta desde 223.149.174.159: bytes=32 tiempo=354ms TTL=233
+
+Estad¡sticas de ping para 223.149.174.159:
+    Paquetes: enviados = 1, recibidos = 1, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 354ms, M ximo = 354ms, Media = 354ms
