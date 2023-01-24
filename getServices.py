@@ -1,8 +1,8 @@
 import socket
 
-def scan(ip,port,l):
-	print("Testing Port: "+str(port))
+def scan(ip,port,l,sock):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	s.settimeout(2)
 	space = 10 - l
 	space = " " * space
 	if s.connect_ex((ip,port)):
@@ -17,6 +17,8 @@ def scan(ip,port,l):
 		except KeyboardInterrupt:
 			print("[-] Exiting!")
 			exit(1)
+		
+
 
 	return True 
-scan("127.94.185.106", 445,0)
+# scan("127.94.185.106", 80,0)
