@@ -30,7 +30,7 @@ for line in Lines:
         #ip_line.append(count)
         # replace_line('ips.json', count+3, "{\n\n")import uuid
 # print uuid.uuid4()
-        replace_line('ips.json', count-2, '"id":'+ '"' + str(uuid.uuid1())+ '"'+',\n')  
+        replace_line('ip.json', count-2, '"id":'+ '"' + str(uuid.uuid1())+ '"'+',\n')  
     # print("Line{}: {}".format(count, line.strip()))
 print(ip_line)
 
