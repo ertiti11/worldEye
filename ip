@@ -1,18 +1,1 @@
-201.15.50.33: ports: {}
-84.121.173.243: ports: {}
-103.126.30.74: ports: {21: 'ftp', 80: 'http', 443: 'https'}
-37.151.146.66: ports: {53: 'domain', 80: 'http', 443: 'https'}
-175.207.118.161: ports: {}
-109.133.221.161: ports: {}
-80.29.108.222: ports: {}
-182.92.115.208: ports: {80: 'http', 1433: 'ms-sql-s', 3389: 'ms-wbt-server'}
-81.110.249.99: ports: {}
-107.12.224.42: ports: {}
-104.115.158.104: ports: {80: 'http', 443: 'https'}
-92.17.25.243: ports: {}
-172.65.111.74: ports: {13: 'daytime', 11: 'systat', 22: 'ssh', 9: 'discard', 7: 'echo', 21: 'ftp', 37: 'time', 19: 'chargen', 20: 'ftp-data', 23: 'telnet', 53: 'domain', 43: 'nicname', 25: 'smtp', 42: 'nameserver', 69: 'tftp', 17: 'qotd', 39: 'rlp', 68: 'bootpc', 81: 'hosts2-ns', 70: 'gopher', 101: 'hostname', 67: 'bootps', 109: 'pop2', 102: 'iso-tsap', 80: 'http', 113: 'auth', 111: 'sunrpc', 88: 'kerberos', 79: 'finger', 110: 'pop3', 107: 'rtelnet', 117: 'uucp-path', 118: 'sqlserv', 123: 'ntp', 119: 'nntp', 135: 'epmap', 139: 'netbios-ssn', 137: 'netbios-ns', 138: 'netbios-dgm', 143: 'imap', 150: 'sql-net', 162: 'snmptrap', 170: 'print-srv', 158: 'pcmail-srv', 161: 'snmp', 179: 'bgp', 156: 'sqlsrv', 194: 'irc', 213: 'ipx', 322: 'rtsps', 349: 'mftp', 389: 'ldap', 445: 'microsoft-ds', 443: 'https', 464: 'kpasswd', 500: 'isakmp', 520: 'efs', 525: 'timed', 531: 'conference', 522: 'ulp', 512: 'exec', 518: 'ntalk', 514: 'cmd', 515: 'printer', 533: 'netwall', 517: 'talk', 529: 'irc-serv', 530: 'courier', 507: 'crs', 550: 'new-rwho', 513: 'login', 526: 'tempo', 540: 'uucp', 532: 'netnews', 543: 'klogin', 548: 'afpovertcp', 544: 'kshell', 547: 'dhcpv6-server', 546: 'dhcpv6-client', 556: 'remotefs', 565: 'whoami', 554: 'rtsp', 569: 'ms-rome', 560: 'rmonitor', 561: 'monitor', 563: 'nntps', 568: 'ms-shuttle', 593: 'http-rpc-epmap', 612: 'hmmp-ind', 636: 'ldaps', 613: 'hmmp-op', 666: 'doom', 691: 'msexch-routing', 750: 'kerberos-iv', 749: 'kerberos-adm', 800: 'mdbs_daemon', 990: 'ftps', 992: 'telnets', 989: 'ftps-data', 995: 'pop3s', 994: 'ircs', 993: 'imaps', 1034: 'activesync', 1110: 'nfsd-status', 1109: 'kpop', 1155: 'nfa', 1167: 'phone', 1270: 'opsmgr', 1434: 'ms-sql-m', 1433: 'ms-sql-s', 1477: 'ms-sna-server', 1478: 'ms-sna-base', 1524: 'ingreslock', 1512: 'wins', 1607: 'stt', 1701: 'l2tp', 1731: 'msiccp', 1723: 'pptp', 1755: 'ms-streaming', 1711: 'pptconference', 1745: 'remote-winsock', 1812: 'radius', 1801: 'msmq', 1813: 'radacct', 1863: 'msnp', 1900: 'ssdp', 1944: 'close-combat', 2053: 'knetd', 2049: 'nfsd', 2106: 'mzap', 2177: 'qwave', 2234: 'directplay', 2382: 'ms-olap3', 2393: 'ms-olap1', 2394: 'ms-olap2', 2383: 'ms-olap4', 2460: 'ms-theater', 2504: 'wlbs', 2525: 'ms-v-worlds', 2703: 'sms-chat', 2704: 'sms-remctrl', 2702: 'sms-xfer', 2725: 'msolap-ptp2', 2701: 'sms-rcinfo', 2869: 'icslap', 3020: 'cifs', 3074: 'xbox', 3126: 'ms-dotnetster', 3132: 'ms-rule-engine', 3268: 'msft-gc', 3269: 'msft-gc-ssl', 3343: 'ms-cluster-net', 3389: 'ms-wbt-server', 3540: 'pnrp-port', 3535: 'ms-la', 3544: 'teredo', 3587: 'p2pgroup', 3702: 'ws-discovery', 3776: 'dvcprov-port', 3847: 'msfw-control', 3882: 'msdts1', 3935: 'sdp-portmapper', 4350: 'net-device', 4500: 'ipsec-msft', 5358: 'wsd', 5355: 'llmnr', 5357: 'wsd', 5678: 'rrac', 5679: 'dccm', 5720: 'ms-licensing', 6073: 'directplay8', 7680: 'ms-do', 9535: 'man', 9753: 'rasadv'}
-2.201.153.51: ports: {}
-2.40.0.161: ports: {}
-106.216.76.145: ports: {}
-105.140.28.222: ports: {}
-200.3.31.14: ports: {}
+202.68.67.49: ports: {}

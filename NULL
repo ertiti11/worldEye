@@ -1,7 +1,9 @@
 
-Haciendo ping a 43.79.54.203 con 32 bytes de datos:
-Tiempo de espera agotado para esta solicitud.
+Haciendo ping a 23.212.169.102 con 32 bytes de datos:
+Respuesta desde 23.212.169.102: bytes=32 tiempo=305ms TTL=37
 
-Estad¡sticas de ping para 43.79.54.203:
-    Paquetes: enviados = 1, recibidos = 0, perdidos = 1
-    (100% perdidos),
+Estad¡sticas de ping para 23.212.169.102:
+    Paquetes: enviados = 1, recibidos = 1, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 305ms, M ximo = 305ms, Media = 305ms

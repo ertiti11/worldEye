@@ -1,6 +1,6 @@
 import socket
 
-def scan(ip,port,l,sock):
+def scan(ip,port,l):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.settimeout(2)
 	space = 10 - l
