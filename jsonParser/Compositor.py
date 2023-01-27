@@ -31,18 +31,24 @@ class Compositor:
             try:
                 data['ports'][0]['service'] = services['name']
                 data['ports'][0]['banner'] = services['banner']
+                print(services['banner'])
+                data['tokens'] = self.tokenizer(services['banner'])
             except:
                 pass
             
             datas.append(data)
             data ={}
-        datas = orjson.dumps(datas, option=orjson.OPT_NAIVE_UTC)    
+        datas = orjson.dumps(datas, option=orjson.OPT_NAIVE_UTC | orjson.OPT_INDENT_2)
         
             
         with open('jsonParser\generated.json', 'wb') as f:
             f.write(datas)
+        print("hecho")
 
-
+    def tokenizer(self, string):
+        test_list = [string]
+        res = [sub.split() for sub in test_list]
+        return res
 
 
 compositor = Compositor()
