@@ -1,5 +1,5 @@
 import orjson
-
+from reverseIP import reverseIP
 class Compositor:
     def __init__(self):
         pass
@@ -25,19 +25,28 @@ class Compositor:
                 
             except KeyError:
                 pass
+            # try:
+            #     hostname = reverseIP(ip)
+            #     data['hostname'] = hostname
+            # except:
+            #     pass
+            
+                pass
             data['id'] = str(id)
             data['ip'] = ip
+            
             data['ports'] = ports
             try:
                 data['ports'][0]['service'] = services['name']
                 data['ports'][0]['banner'] = services['banner']
-                print(services['banner'])
+                
                 data['tokens'] = self.tokenizer(services['banner'])
             except:
                 pass
             
             datas.append(data)
             data ={}
+            print(i)
         datas = orjson.dumps(datas, option=orjson.OPT_NAIVE_UTC | orjson.OPT_INDENT_2)
         
             
@@ -53,4 +62,4 @@ class Compositor:
 
 compositor = Compositor()
 
-ddd  = compositor.masscan2Json('jsonParser\ipss.json')
+compositor.masscan2Json('jsonParser\ips.json')
