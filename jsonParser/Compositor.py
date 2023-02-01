@@ -46,7 +46,7 @@ class Compositor:
             
             datas.append(data)
             data ={}
-            print(i)
+            
         datas = orjson.dumps(datas, option=orjson.OPT_NAIVE_UTC | orjson.OPT_INDENT_2)
         
             
@@ -62,4 +62,4 @@ class Compositor:
 
 compositor = Compositor()
 
-compositor.masscan2Json('jsonParser\ips.json')
+compositor.masscan2Json('jsonParser\ipss.json')
