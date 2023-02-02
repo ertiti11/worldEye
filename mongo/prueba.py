@@ -3,7 +3,7 @@ from Compositor import Compositor
 
 
 compositor = Compositor()
-data = compositor.masscan2Json('mongo\generated.json')
-client = Mongo('170.187.188.121')
+data = compositor.masscan2Json('Data\generated.json')
+client = Mongo('localhost')
 
 client.WriteMany(data)
