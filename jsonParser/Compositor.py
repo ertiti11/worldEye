@@ -1,65 +1,65 @@
 import orjson
-from reverseIP import reverseIP
+from datetime import datetime
+import json,logging
+
+
 class Compositor:
     def __init__(self):
         pass
-        
 
-    def masscan2Json(self, file):
-        import json
-        import uuid
-        a_file = open(file, "r")
-        json_object = json.load(a_file)
+    def masscan2Json(self, file: str):
+        """Recibe como parametro una ruta a un archivo la cual
+        sera un archivo sin procesar directamente desde masscan y lo convierte
+        en un archivo procesado con su propia estructura de datos.
+        """
 
-        data = {}
+        inputObject = json.load(open(file, "r"))
 
-        datas = []
+        outDict = {}
 
-        for i in range(0,len(json_object)):
-            ip = json_object[i]["ip"] # = 23.45.59.219
-            ports = json_object[i]["ports"] #  = 80
-            
-            id = uuid.uuid4() # 1234-1234-51-2334
+        outArray = []
+
+        for i in range(0, len(inputObject)):
+            ip = inputObject[i]["ip"]  # = 23.45.59.219
+            date = datetime.fromtimestamp(int(inputObject[i]["timestamp"])).strftime('%d-%m-%y')
+            ports = inputObject[i]["ports"]  # = 80
             try:
-                services = ports[0]['service'] # http
-                
+                services = ports[0]['service']  # http
+
             except KeyError:
+
                 pass
-            # try:
-            #     hostname = reverseIP(ip)
-            #     data['hostname'] = hostname
-            # except:
-            #     pass
-            
-                pass
-            data['id'] = str(id)
-            data['ip'] = ip
-            
-            data['ports'] = ports
+
+            outDict['ip'] = ip
+            outDict['date'] = date
+            outDict['ports'] = ports
+
             try:
-                data['ports'][0]['service'] = services['name']
-                data['ports'][0]['banner'] = services['banner']
-                
-                data['tokens'] = self.tokenizer(services['banner'])
+                outDict['ports'][0]['service'] = services['name']
+                outDict['ports'][0]['banner'] = services['banner']
+                outDict['tokens'] = self.tokenizer(services['banner'])
             except:
                 pass
-            
-            datas.append(data)
-            data ={}
-            
-        datas = orjson.dumps(datas, option=orjson.OPT_NAIVE_UTC | orjson.OPT_INDENT_2)
+
+            outArray.append(outDict)
+            outDict = {}
+
+        outArray = orjson.dumps(
+            outArray, option=orjson.OPT_NAIVE_UTC | orjson.OPT_INDENT_2)
+
         
-            
-        with open('jsonParser\generated.json', 'wb') as f:
-            f.write(datas)
-        print("hecho")
 
-    def tokenizer(self, string):
-        test_list = [string]
-        res = [sub.split() for sub in test_list]
-        return res
+        with open('../outData/{}.json'.format(str(datetime.now().strftime('%d-%m-%y_%H_%M'))), 'wb') as f:
+            f.write(outArray)
+
+    def tokenizer(self, raw:str)-> str:
+        """Recibe como parametro todas las palabras del resultado
+        de masscan y los separa por espacios y hace palabras separadas
+        con ellas
+        """
+        rawString = [raw]
+        tokenList = [sub.split() for sub in rawString]
+        return tokenList
 
 
-compositor = Compositor()
 
-compositor.masscan2Json('jsonParser\ipss.json')
