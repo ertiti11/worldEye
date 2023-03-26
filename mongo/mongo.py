@@ -17,14 +17,14 @@ class Mongo:
         print(collection.list_collection_names())
 
     # Escribe en una colección, los datos deben de ser un diccionario
-    def WriteDocument(self, data: dict):  # data must be adict
-        self.db = self.client.WorldEye
-        self.transactions = self.db.prueba
+    def WriteDocument(self,db:str ,collection:str, data):  # data must be adict
+        self.db = self.client[db]
+        self.transactions = self.db[collection]
         self.response = self.transactions.insert_one(data)
         print(self.response.inserted_id)
 
-    def WriteMany(self, DataArray):
-        self.db = self.client.WorldEye
-        self.transactions = self.db.prueba
-        self.response = self.transactions.insert_many(DataArray)
+    def WriteMany(self,db:str ,collection:str, dataArray):
+        self.db = self.client[db]
+        self.transactions = self.db[collection]
+        self.response = self.transactions.insert_many(dataArray)
         print(self.response.inserted_ids)

@@ -3,3 +3,5 @@ NULL
 Data
 *.json
 Data/*.json
+OutData/*.json
+RawData/*.json

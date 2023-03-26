@@ -49,17 +49,18 @@ class Compositor:
 
         
 
-        with open('../outData/{}.json'.format(str(datetime.now().strftime('%d-%m-%y_%H_%M'))), 'wb') as f:
+        with open('./{}.json'.format(str(datetime.now().strftime('%d-%m-%y_%H_%M'))), 'wb') as f:
             f.write(outArray)
-
+        return outArray
     def tokenizer(self, raw:str)-> str:
         """Recibe como parametro todas las palabras del resultado
         de masscan y los separa por espacios y hace palabras separadas
         con ellas
         """
-        rawString = [raw]
-        tokenList = [sub.split() for sub in rawString]
-        return tokenList
+        
+        # tokenList = rawString.split()
+        return raw.split()
+        
 
 
 
